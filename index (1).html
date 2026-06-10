@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sebastian Mathias Macedo Távara</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #1a1a18;
+      --muted: #6b6b65;
+      --accent: #2a4a7f;
+      --border: #e0ddd5;
+      --nav-h: 56px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover, nav a.active { color: var(--text); }
+
+    nav a.active {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* LAYOUT */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    /* HOME SECTION */
+    .home {
+      display: block;
+    }
+
+    .home-text h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+
+    .affiliation {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+      letter-spacing: 0.01em;
+    }
+
+    .bio {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #3a3a36;
+      max-width: 520px;
+    }
+
+    .bio p + p { margin-top: 1em; }
+
+    /* LINKS ROW */
+    .links {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+      padding-bottom: 1px;
+    }
+
+    .links a:hover { border-color: var(--accent); }
+
+    .links .placeholder-link {
+      font-size: 13px;
+      color: #b0aca2;
+      cursor: default;
+      font-style: italic;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 32px;
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .home {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .photo-placeholder {
+        width: 140px;
+        height: 170px;
+      }
+      .photo-wrap { align-items: flex-start; }
+      main { padding: 3rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <!-- Add more nav items here: Research, Teaching, CV, etc. -->
+    </ul>
+  </nav>
+
+  <main>
+    <section class="home">
+
+      <div class="home-text">
+        <h1>Sebastian Mathias<br>Macedo Távara</h1>
+        <p class="affiliation">PUCP</p>
+
+        <div class="bio">
+          <p>
+            Economics student at the Pontificia Universidad Católica del Perú (PUCP)
+            with a strong interest in mathematical economics. My research interests
+            include game theory, international trade, and economic theory.
+          </p>
+          <p>
+            I am particularly drawn to questions where mathematical structure and economic
+            reasoning reinforce each other — from strategic interaction and mechanism design
+            to the organization of markets and the patterns of trade.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="links">
+          <!-- Uncomment and fill in as you add links:
+          <a href="mailto:youremail@pucp.edu.pe">Email</a>
+          <a href="#">CV</a>
+          <a href="#">GitHub</a>
+          <a href="#">Google Scholar</a>
+          -->
+          <span class="placeholder-link">Links coming soon</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
